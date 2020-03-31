@@ -29,15 +29,7 @@ std::tuple<point_t, point_t, float> find_closest_bf(const std::vector<point_t>& 
     return std::tuple<point_t, point_t, float>(buf[start + min_i], buf[start + min_j], fastSqrtf(min_dist));
 }
 
-std::tuple<point_t, point_t, float> find_closest(const std::vector<point_t>& buf, int start, int count) {
-    //if (count > 222 && start == 0) {
-    //    if (std::abs(buf[222].x - 10.1520405f) < 0.01f &&
-    //        std::abs(buf[222].y - 92.6438904f) < 0.01f)
-    //    {
-    //        std::cout << '\0';
-    //    }
-    //}
-    
+std::tuple<point_t, point_t, float> find_closest(const std::vector<point_t>& buf, int start, int count) {   
     if (count < treshold) {
         return find_closest_bf(buf, start, count);
     }
