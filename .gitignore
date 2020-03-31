@@ -32,4 +32,5 @@
 *.app
 
 #vs-folders
-.vs
+.vs/
+x64/
